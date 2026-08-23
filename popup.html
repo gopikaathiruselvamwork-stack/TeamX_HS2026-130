@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScamX Popup</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <div class="popup-header">
+      <div class="brand-row">
+        <div class="brand-badge">⚡</div>
+        <div class="brand-name">Scam<span>X</span></div>
+      </div>
+      <a href="http://localhost:8000" target="_blank" class="app-link-btn" title="Open Full Dashboard">
+        Dashboard ↗
+      </a>
+    </div>
+
+    <!-- Quick Scan Box -->
+    <div class="quick-scan-section">
+      <textarea id="popup-input" class="popup-textarea" placeholder="Paste job message, WhatsApp chat, or link to verify..."></textarea>
+      <button id="popup-scan-btn" class="popup-btn-primary">
+        ⚡ Scan with ScamX
+      </button>
+    </div>
+
+    <!-- Result Display -->
+    <div id="popup-result-area" class="result-box" style="display: none;">
+      <div class="score-row">
+        <div id="popup-score-badge" class="risk-pill safe">
+          <span id="popup-score-val">0</span> / 100
+        </div>
+        <div id="popup-risk-level-label" class="risk-label">Low Risk</div>
+      </div>
+      <div id="popup-result-title" class="result-title">Opportunity Authenticity Verified</div>
+      <div id="popup-result-summary" class="result-desc">No deceptive patterns detected.</div>
+
+      <div id="popup-flags-list" class="flags-container"></div>
+
+      <a href="http://localhost:8000" target="_blank" class="view-full-btn">
+        View In-Depth Report in ScamX App →
+      </a>
+    </div>
+
+    <!-- Recent Scan Prompt -->
+    <div id="popup-empty-state" class="empty-state">
+      <div style="font-size: 11px; color: #64748B;">Tip: You can also right-click any selected text or link on any webpage and select "Check with ScamX".</div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
